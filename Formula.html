@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="UserInterface.css">
+<script src="Formula.js" defer></script>
+<canvas id="staticCanvas" class="static-background"></canvas>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego's Probability</title>
+    <link rel="stylesheet" href="UserInterface.css"> <!-- Ensure the CSS file is linked -->
+</head>
+<body>
+    <h1>DIEGO’S PROBABILITY</h1>
+    <h2>A way to calculate probability when an external factor,
+        Authenticity, is applied.</h2>
+
+    <!-- P(A) Section -->
+    <div class="p-container">
+        <span class="p-label">P(A) =</span>
+        <input type="text" id="pInput">
+    </div>
+
+    <!-- Confidence Factor (C) Section -->
+    <div class="c-container">
+        <span class="c-label">Confidence Factor (C) =</span>
+        <input type="text" id="cInput">
+    </div>
+
+    <button>CALCULATE</button>
+    <p class="result" id="result"></p>
+
+
+
+    <script src="Formula.js"></script>
+    <script>
+        document.getElementById("toggle-abbr").addEventListener("click", function () {
+            let abbrDiv = document.getElementById("abbreviations");
+            if (abbrDiv.style.display === "none") {
+                abbrDiv.style.display = "block";
+                this.textContent = "HIDE ABBREVIATIONS";
+            } else {
+                abbrDiv.style.display = "none";
+                this.textContent = "SHOW ABBREVIATIONS";
+            }
+        });
+    </script>
+</body>
+</html>
